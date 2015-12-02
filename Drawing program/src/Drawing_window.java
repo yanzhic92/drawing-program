@@ -29,7 +29,9 @@ public class Drawing_window extends JFrame {
 		
 		setSize(w, h);
 		
+		DrawArea DrawArea = new DrawArea();
 	    Container c = getContentPane();
+	    c.add(DrawArea,BorderLayout.CENTER);  
 
 	    
 	    setVisible(true);
