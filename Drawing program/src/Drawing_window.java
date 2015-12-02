@@ -10,7 +10,6 @@ public class Drawing_window extends JFrame {
 	private JToolBar buttons;
 	
 	public Drawing_window(int h, int w){
-		lol
 		file = new JMenu("File");
 		bar = new JMenuBar();
 		bar.add(file);
