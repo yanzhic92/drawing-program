@@ -8,7 +8,7 @@ public class Drawing_window extends JFrame {
 	private JMenu file;
 	private JMenuItem newfile,openfile,savefile,exit;//items in "file"
 	
-	private JPanel buttonbar;
+	private JToolBar buttonbar;
 	private JButton button[];
 	private String buttonnames[] = {
 			"pen","line","rect","circle","rubber"
@@ -33,7 +33,7 @@ public class Drawing_window extends JFrame {
 		file.add(exit);
 		
 		//set buttons
-		buttonbar = new JPanel();
+		buttonbar = new JToolBar();
 		buttonbar.setLayout(new GridLayout(1,5));
 		button = new JButton[buttonnames.length];
 		   for(int i = 0; i < buttonnames.length; i++){
