@@ -37,7 +37,7 @@ public class Drawing_window extends JFrame {
 		buttonbar.setLayout(new GridLayout(1,5));
 		button = new JButton[buttonnames.length];
 		   for(int i = 0; i < buttonnames.length; i++){
-			   button[i] = new JButton();
+			   button[i] = new JButton(buttonnames[i]);
 			   buttonbar.add(button[i]);
 		   }
 		
