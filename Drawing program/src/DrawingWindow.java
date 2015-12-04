@@ -3,7 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 
-public class Drawing_window extends JFrame {
+public class DrawingWindow extends JFrame {
 	private JMenuBar bar;
 	private JMenu file;
 	private JMenuItem newfile,openfile,savefile,exit;//items in "file"
@@ -15,7 +15,7 @@ public class Drawing_window extends JFrame {
 			"pen","line","rect","circle","rubber"
 	};
 	
-	public Drawing_window(int w,int h){
+	public DrawingWindow(int w,int h){
 		//set menu
 		file = new JMenu("File");
 		bar = new JMenuBar();
