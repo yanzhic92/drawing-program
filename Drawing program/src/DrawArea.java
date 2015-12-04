@@ -9,16 +9,20 @@ public class DrawArea extends JPanel{
 	int index = 0;
 	int R,G,B;
 	float stroke = (float) 1.0;
+	
 	DrawArea(DrawingWindow d) {  
 		DrawingWindow = d;  
 	    setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));  
 	    setBackground(Color.white);
+	    addMouseListener(new MouseA());//add mouselistener 
+        addMouseMotionListener(new MouseB());  
 	    createNewitem();  
 	    }  
 
 public void setStroke(float f){
 	stroke = f;
 }
+
 void createNewitem(){
 		switch(currentChoice){
 		case 1: DrawList[index] = new Pen();break;
