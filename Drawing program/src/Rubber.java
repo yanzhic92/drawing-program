@@ -1,4 +1,5 @@
 import java.awt.*;
+
 public class Rubber extends Drawing{
     void draw(Graphics2D g2d ){  
         g2d.setPaint(new Color(255,255,255));

@@ -1,4 +1,5 @@
 import java.awt.*;
+
 public class Rect extends Drawing{
     void draw(Graphics2D g2d ){  
         g2d.setPaint(new Color(R,G,B));  

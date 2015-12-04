@@ -1,5 +1,6 @@
 import java.awt.*;
-class Line extends Drawing
+
+public class Line extends Drawing
 {
 	void draw(Graphics2D g) {
 		g.setColor(new Color(R,G,B));
