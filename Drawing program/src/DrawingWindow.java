@@ -44,7 +44,7 @@ public class DrawingWindow extends JFrame {
 		
 		setSize(w, h);
 		
-		drawarea = new DrawArea();
+		DrawArea drawarea = new DrawArea(null);
 	    Container c = getContentPane();
 	    c.add(drawarea,BorderLayout.CENTER);
 	    c.add(buttonbar,BorderLayout.NORTH);
