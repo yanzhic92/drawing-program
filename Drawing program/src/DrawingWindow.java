@@ -57,6 +57,29 @@ public class DrawingWindow extends JFrame {
 	    public void setStratBar(String s) {  
 	        startbar.setText(s);  
 	    }  
+	    
+	    public void actionPerformed(ActionEvent e) {  
+	        // TODO 事件的处理  
+	        for(int i = 3; i<=13;i++)  
+	        {  
+	            if(e.getSource() ==button[i])  
+	            {  
+	                drawarea.setCurrentChoice(i);  
+	                drawarea.createNewitem();  
+	                drawarea.repaint();  
+	            }  
+	              
+	        }  
+	        if(e.getSource() == newfile||e.getSource() == button[0])//新建  
+	        {fileclass.newFile();}  
+	        else if(e.getSource() == openfile||e.getSource() == button[1])//打开  
+	        {fileclass.openFile();}  
+	        else if(e.getSource() == savefile||e.getSource() == button[2])//保存  
+	        {fileclass.saveFile();}  
+	        else if(e.getSource() == exit)//退出程序  
+	        {System.exit(0);}  
+	        
+	    }
 	
 	}	
 	

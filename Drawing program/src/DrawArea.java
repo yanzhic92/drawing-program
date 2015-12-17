@@ -56,6 +56,10 @@ void createNewitem(){
  
 }
 
+public void setIndex(int x){//设置index的接口  
+    index = x;  
+}  
+
 class MouseA extends MouseAdapter  
 {  
       
