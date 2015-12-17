@@ -8,6 +8,7 @@ public class DrawingWindow extends JFrame {
 	private JMenu file;
 	private JMenuItem newfile,openfile,savefile,exit;//items in "file"
 	private DrawArea drawarea;
+	private JLabel startbar;//×´Ì¬À¸  
 	
 	private JToolBar buttonbar;
 	private JButton button[];
@@ -44,13 +45,17 @@ public class DrawingWindow extends JFrame {
 		
 		setSize(w, h);
 		
-		DrawArea drawarea = new DrawArea(null);
+		DrawArea drawarea = new DrawArea(this);
 	    Container c = getContentPane();
 	    c.add(drawarea,BorderLayout.CENTER);
 	    c.add(buttonbar,BorderLayout.NORTH);
 
 	    
 	    setVisible(true);
+	    
+	    public void setStratBar(String s) {  
+	        startbar.setText(s);  
+	    }  
 	
 	}	
 	
