@@ -59,6 +59,9 @@ void createNewitem(){
 public void setIndex(int x){//设置index的接口  
     index = x;  
 }  
+public int getIndex(){//设置index的接口  
+    return index ;  
+}  
 
 public void setCurrentChoice(int i )//文字的输入  
 {  
