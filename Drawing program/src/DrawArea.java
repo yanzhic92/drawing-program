@@ -98,7 +98,7 @@ class MouseA extends MouseAdapter
         DrawList[index].y2 = me.getY();  
         repaint();  
         index++;  
-        createNewitem()
+        createNewitem();
     }  
 }  
 class MouseB extends MouseMotionAdapter {  
