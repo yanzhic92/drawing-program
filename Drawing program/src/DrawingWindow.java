@@ -9,6 +9,7 @@ public class DrawingWindow extends JFrame {
 	private JMenuItem newfile,openfile,savefile,exit;//items in "file"
 	private DrawArea drawarea;
 	private JLabel startbar;
+	private FileClass fileclass ;
 	
 	private JToolBar buttonbar;
 	private JButton button[];
@@ -46,6 +47,7 @@ public class DrawingWindow extends JFrame {
 		setSize(w, h);
 		
 		DrawArea drawarea = new DrawArea(this);
+        fileclass = new FileClass(this,drawarea);  
 	    Container c = getContentPane();
 	    c.add(drawarea,BorderLayout.CENTER);
 	    c.add(buttonbar,BorderLayout.NORTH);
