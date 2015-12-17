@@ -60,6 +60,11 @@ public void setIndex(int x){//设置index的接口
     index = x;  
 }  
 
+public void setCurrentChoice(int i )//文字的输入  
+{  
+    currentChoice = i;  
+}  
+
 class MouseA extends MouseAdapter  
 {  
       
