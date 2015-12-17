@@ -21,7 +21,7 @@ public class DrawArea extends JPanel{
 	
 	public void paintComponent(Graphics g){  
         super.paintComponent(g);  
-        Graphics2D g2d = (Graphics2D)g;//定义随笔画  
+        Graphics2D g2d = (Graphics2D)g; 
         int  j = 0;  
         while(j<=index)  
         {  
@@ -32,7 +32,7 @@ public class DrawArea extends JPanel{
     }  
     void draw(Graphics2D g2d , Drawing i)  
     {  
-        i.draw(g2d);//将画笔传到个各类的子类中，用来完成各自的绘图  
+        i.draw(g2d);
     }  
     
     
@@ -61,36 +61,36 @@ class MouseA extends MouseAdapter
       
     @Override  
     public void mouseEntered(MouseEvent me) {  
-        // TODO 鼠标进入  
-        DrawingWindow.setStratBar("鼠标进入在：["+me.getX()+" ,"+me.getY()+"]");  
+        // TODO 
+        DrawingWindow.setStratBar("mouseEntered at:["+me.getX()+" ,"+me.getY()+"]");  
     }  
     @Override  
     public void mouseExited(MouseEvent me) {  
-        // TODO 鼠标退出  
-    	DrawingWindow.setStratBar("鼠标退出在：["+me.getX()+" ,"+me.getY()+"]");  
+        // TODO 
+    	DrawingWindow.setStratBar("mouseExited at:["+me.getX()+" ,"+me.getY()+"]");  
     }  
     @Override  
     public void mousePressed(MouseEvent me) {  
-        // TODO 鼠标按下  
-    	DrawingWindow.setStratBar("鼠标按下在：["+me.getX()+" ,"+me.getY()+"]");//设置状态栏提示  
+        // TODO   
+    	DrawingWindow.setStratBar("mousePressed at:["+me.getX()+" ,"+me.getY()+"]");
           
     	DrawList[index].x1 = DrawList[index].x2 = me.getX();  
     	DrawList[index].y1 = DrawList[index].y2 = me.getY();  
           
-        //如果当前选择为随笔画或橡皮擦 ，则进行下面的操作  
+
         if(currentChoice == 3||currentChoice ==13){  
         	DrawList[index].x1 = DrawList[index].x2 = me.getX();  
         	DrawList[index].y1 = DrawList[index].y2 = me.getY();  
             index++;  
-            createNewitem();//创建新的图形的基本单元对象  
+            createNewitem();
         }  
               
     }  
     @Override  
     public void mouseReleased(MouseEvent me) {  
-        // TODO 鼠标松开  
-    	DrawingWindow.setStratBar("鼠标松开在：["+me.getX()+" ,"+me.getY()+"]");  
-        if(currentChoice == 3||currentChoice ==13){  
+        // TODO
+    	DrawingWindow.setStratBar("mouseReleased at:["+me.getX()+" ,"+me.getY()+"]");  
+        if(currentChoice == 1||currentChoice ==5){  
         	DrawList[index].x1 = me.getX();  
         	DrawList[index].y1 = me.getY();  
         }  
@@ -98,10 +98,31 @@ class MouseA extends MouseAdapter
         DrawList[index].y2 = me.getY();  
         repaint();  
         index++;  
-        createNewitem();//创建新的图形的基本单元对象  
+        createNewitem()
     }  
 }  
+class MouseB extends MouseMotionAdapter {  
+    public void mouseDragged(MouseEvent me)  
+    {  
+    	DrawingWindow.setStratBar("mouseDragged at锛歔"+me.getX()+" ,"+me.getY()+"]");  
+        if(currentChoice == 1||currentChoice ==5){  
+        	DrawList[index-1].x1 = DrawList[index].x2 = DrawList[index].x1 =me.getX();  
+        	DrawList[index-1].y1 = DrawList[index].y2 = DrawList[index].y1 = me.getY();  
+            index++;  
+            createNewitem();
+        }  
+        else   
+        {  
+        	DrawList[index].x2 = me.getX();  
+        	DrawList[index].y2 = me.getY();  
+        }  
+        repaint();  
+    }  
+    public void mouseMoved(MouseEvent me)
+    {  
+    	DrawingWindow.setStratBar("mouseMoved at锛歔"+me.getX()+" ,"+me.getY()+"]");  
+    }  
+  }  
+}  
 
-
-}
 
