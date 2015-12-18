@@ -6,7 +6,7 @@ import javax.swing.filechooser.*;
 public class FileClass {
 	 private DrawingWindow drawingwindow;
 	 DrawArea drawarea = null; 
-	 FileClass(DrawingWindow d,DrawArea da) {  
+	 FileClass(DrawingWindow dw,DrawArea da) {  
 	        drawingwindow = dw;  
 	        drawarea = da;  
 	    }  
