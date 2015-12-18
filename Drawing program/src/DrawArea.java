@@ -56,14 +56,14 @@ void createNewitem(){
  
 }
 
-public void setIndex(int x){//设置index的接口  
+public void setIndex(int x){
     index = x;  
 }  
-public int getIndex(){//设置index的接口  
+public int getIndex(){ 
     return index ;  
 }  
 
-public void setCurrentChoice(int i )//文字的输入  
+public void setCurrentChoice(int i )
 {  
     currentChoice = i;  
 }  

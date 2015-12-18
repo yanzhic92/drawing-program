@@ -61,7 +61,7 @@ public class DrawingWindow extends JFrame {
 	    }  
 	    
 	    public void actionPerformed(ActionEvent e) {  
-	        // TODO 事件的处理  
+	        // TODO 
 	        for(int i = 3; i<=13;i++)  
 	        {  
 	            if(e.getSource() ==button[i])  
@@ -72,13 +72,13 @@ public class DrawingWindow extends JFrame {
 	            }  
 	              
 	        }  
-	        if(e.getSource() == newfile||e.getSource() == button[0])//新建  
+	        if(e.getSource() == newfile||e.getSource() == button[0])
 	        {fileclass.newFile();}  
-	        else if(e.getSource() == openfile||e.getSource() == button[1])//打开  
+	        else if(e.getSource() == openfile||e.getSource() == button[1]) 
 	        {fileclass.openFile();}  
-	        else if(e.getSource() == savefile||e.getSource() == button[2])//保存  
+	        else if(e.getSource() == savefile||e.getSource() == button[2])
 	        {fileclass.saveFile();}  
-	        else if(e.getSource() == exit)//退出程序  
+	        else if(e.getSource() == exit)
 	        {System.exit(0);}  
 	        
 	    }
